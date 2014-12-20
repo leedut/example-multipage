@@ -28,6 +28,18 @@ require.js优化过的前端页面有这样的优点:
 
 所以我们可以通过配置文件的方式，让子页面的入口js文件来决定其加载的文件。这样可以将后端逻辑代码和前端js加载代码分离，后端需要做的，只是在模型或者action方法里根据当前页面路由（例如AddUser、ListUser等）定义一个string，在模版引擎输出的时候虽然根据同一layout页面进行布局，但是根据路由定义的string就是这个子页面的入口文件。
 
+    /*thinkphp的Admin下的action方法*/
+    public function singleArtist(){
+	    //...
+	    $js_name = 'admin.singleartist'
+	    $this->assign('js_name',$js_name);
+	    $this->display();
+	}
+    /*模版页面底部*/
+    ....-->
+    <script type="text/javascript" src="js/require.js" data-main="js/{$js_name}.js" defer async="true" ></script>
+
+
 而且这种方法还有一个好处就是分部视图的子视图中不出现任何script代码，也就是说子视图只负责html骨架，具体要加载什么js文件，不过问，交给路由了。以后js文件进行修改时，无需改动后端html或者php源码，只需改动几个静态的入口js文件即可，不用担心模块依赖和版本冲突。
 
 原fork项目里的解决方案也是这个思路。所以梳理一下在处理多页面下的文件加载时，我们可以：
