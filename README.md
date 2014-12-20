@@ -33,8 +33,13 @@ require.js优化过的前端页面有这样的优点:
 原fork项目里的解决方案也是这个思路。所以梳理一下在处理多页面下的文件加载时，我们可以：
  * 模版页面内定义通用script标签，用于加载require.js和子页面入口文件
  * 子页面内无需写入script标签，而在子页面对应的model或action中定义主入口文件名称
-＊
+ * 可以自定义一个config文件，用来加载最基础的依赖库和配置模块。子页面的入口文件里就无需二次定义jquery、zepto这些类库了。
 
+简单写了上面两个版本：asp .net mvc 和 thinkphp版本的，不是完整的运行文件，就是给各位提供一下解决思路吧。
+
+###进一步优化
+可以利用require.js所提供的node环境下的r.js合并子页面所需的小文件，具体请移步[r.js](https://github.com/jrburke/r.js)。
+	
 
 
 
