@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>${pagename}</title>
+</head>
+
+<body>
+    <h3>不使用require.js，页面可能是这样的:</h3>
+    <p>&lt;script type="text/javascript" src="/js/jquery.js"&gt;&lt;/script&gt;</p>
+    <p>&lt;script type="text/javascript" src="http://widget.renren.com/js/rrshare.js"&gt;&lt;/script&gt;</p>
+    <p>&lt;script type="text/javascript" src="/js/uploader.min.js"&gt;&lt;/script&gt;</p>
+    <p>...</p>
+    
+    <!--实际应用-->
+    <script type="text/javascript" src="../js/require.js" data-main="../js/app/{$scriptname}"></script>
+</body>
+
+</html>
