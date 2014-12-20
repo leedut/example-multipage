@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout Page</title>
+    </head>
+    <body>
+        <!--分部视图加载位置-->
+        @Renderbody();
+        
+        <!--layout页面不加载js文件-->
+        @RenderSection("require_js_module", false)
+        
+    </body>
+</html>
