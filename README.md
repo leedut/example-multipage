@@ -36,7 +36,7 @@ require.js优化过的前端页面有这样的优点:
 	    $this->display();
 	}
     /*模版页面底部*/
-    ....-->
+    ....
     <script type="text/javascript" src="js/require.js" data-main="js/{$js_name}.js" defer async="true" ></script>
 
 
