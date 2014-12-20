@@ -48,7 +48,6 @@ require.js优化过的前端页面有这样的优点:
  * 可以自定义一个config文件，用来加载最基础的依赖库和配置模块。子页面的入口文件里就无需二次定义jquery、zepto这些类库了。
 
      /*config.js示例*/
-     
      require.config({
 	     paths: {
 		     "jquery": "js/jquery.min",
@@ -65,7 +64,6 @@ require.js优化过的前端页面有这样的优点:
 				}
 		}
 	});
-
 
 所以简单写了两个版本：asp .net mvc 和 thinkphp版本的，不是完整的运行文件，就是给各位提供一下解决思路吧。
 
