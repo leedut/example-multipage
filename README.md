@@ -4,7 +4,7 @@
 ###require.js简介
 require.js是一个javascript模块化编程的基础库，提供了异步加载和模块依赖的解决办法。其他入门简介请移步：[Javascript模块化编程（三）：require.js的用法 ](http://www.ruanyifeng.com/blog/2012/11/require_js.html) 。
 ###实际应用场景
-#####require.js优化过的前端页面有这样的优点:
+require.js优化过的前端页面有这样的优点:
  * **JS文件异步加载**：
  页面初始化可以缩减为require.js和入口main.js文件，其余需要的js文件则可以通过main.js实现异步加载，不会出现因加载js阻塞导致页面假死的情况。
  * **解决模块依赖**：
